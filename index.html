@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#bfe6f5" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon-180.png" />
+    <meta name="apple-mobile-web-app-title" content="Loader" />
+    <title>Loader</title>
+    <script type="module" crossorigin src="./assets/index-BHCyMdli.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/tutorial-J8LlS3AN.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-CuOy2VBT.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+
+      <div id="hud">
+        <div class="topbar">
+          <div class="pill coins" aria-label="Coins">
+            <span class="icon coin-icon"></span>
+            <span id="coins">0</span>
+          </div>
+          <button class="pill gems" id="btn-gems" aria-label="Gems: open the shop">
+            <span class="icon gems-icon"></span>
+            <span id="gems">0</span>
+          </button>
+          <div class="pill bucket" aria-label="Bucket">
+            <span class="icon bucket-icon"></span>
+            <div class="bar"><div id="bucket-fill"></div></div>
+            <span id="bucket-text">0 / 50 kg</span>
+            <span id="bucket-find" class="icon gem-icon" hidden></span>
+          </div>
+          <div class="pill area" id="area-name"></div>
+          <div class="spacer"></div>
+          <button id="btn-sound" class="round" aria-label="Settings"></button>
+          <button id="btn-missions" class="round" aria-label="Missions"><span class="icon flag-icon"></span></button>
+          <button id="btn-trophies" class="round" aria-label="Finds and trophies"><span class="icon trophy-icon"></span></button>
+          <button id="btn-upgrade" class="round" aria-label="Upgrades"><span class="icon wrench-icon"></span></button>
+          <button id="btn-map" class="round" aria-label="Map"><span class="icon map-icon"></span></button>
+        </div>
+
+        <div id="objectives">
+          <button id="goal" class="goal" hidden>
+            <span class="goal-text"></span>
+            <span class="goal-bar"><span></span></span>
+          </button>
+          <button id="track" class="track" hidden><span class="icon flag-icon"></span><span class="track-text"></span></button>
+          <div id="builds"></div>
+        </div>
+
+        <div id="mine-label" class="world-label" hidden><span class="wl-text"></span><span class="wl-bar"><span></span></span></div>
+
+        <div id="toasts" aria-live="polite"></div>
+
+        <div id="coach" class="coach" hidden aria-live="polite">
+          <span id="coach-count" class="coach-count"></span>
+          <span class="coach-text"><b id="coach-title"></b><span id="coach-sub"></span></span>
+          <button id="coach-skip" class="coach-skip">Skip</button>
+        </div>
+
+        <div id="joystick-zone">
+          <div id="joy-base"><div id="joy-knob"></div></div>
+        </div>
+
+        <div id="bucket-controls">
+          <button id="btn-raise" class="ctl" aria-label="Raise bucket"><span class="icon up-icon"></span></button>
+          <button id="btn-dump" class="ctl big" aria-label="Dump"><span class="icon dump-icon"></span><span class="label">Dump</span></button>
+          <button id="btn-lower" class="ctl" aria-label="Lower bucket"><span class="icon down-icon"></span></button>
+        </div>
+      </div>
+
+      <div id="panel" class="panel" hidden>
+        <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="panel-title">
+          <header>
+            <h2 id="panel-title"></h2>
+            <button id="panel-close" class="round small" aria-label="Close"><span class="icon close-icon"></span></button>
+          </header>
+          <div id="panel-body"></div>
+        </div>
+      </div>
+
+      <div id="rotate-hint"><div><span class="icon rotate-icon"></span><p>Turn your phone sideways to play</p></div></div>
+    </div>
+  </body>
+</html>
